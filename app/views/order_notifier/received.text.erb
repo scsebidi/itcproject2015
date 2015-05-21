@@ -1,0 +1,9 @@
+Dear <%= @order.name%>
+
+Thank you for your recent order from Mocks Online Store.
+
+You ordered the following items:
+
+<%= render @order.line_items %> 
+
+Another Email will be sent once the order is shipped.

@@ -1,0 +1,13 @@
+<!-- START_HIGHLIGHT -->
+<% if line_item == @current_item %>
+<tr id="current_item">
+<% else %>
+<tr>
+<% end %>
+<!-- END_HIGHLIGHT -->
+  <td><%= line_item.quantity %>&times;</td>
+  <td><%= line_item.product.title %></td>
+  <td class="total_cell"><%= sprintf("R%0.02f", line_item.total_price) %></td>
+  
+ 
+</tr>

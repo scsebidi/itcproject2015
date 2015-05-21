@@ -1,0 +1,25 @@
+<% if notice %>
+<p id="notice"><%= notice%></p>
+<% end %>
+
+<h1>Mocks Jeans Products</h1>
+<div class="row">
+<% @products.each do |product|%>
+
+	<div class="col-md-3">
+	     <div class="thumbnail">
+	            <%= image_tag(product.image) %>
+	            <div class="caption">
+	                <h4 class="pull-right"><%= sprintf("R%0.02f", product.price)%></h4>
+	                <h4><a href="#"><%= product.title%></a>
+	                </h4>
+	                <p><%= sanitize(product.description) %></p>
+	            </div>
+	             <%= button_to 'Add to Cart', line_items_path(product_id: product),
+                 remote: true %>
+	     </div>
+	</div>          
+
+<% end %>
+</div>
+

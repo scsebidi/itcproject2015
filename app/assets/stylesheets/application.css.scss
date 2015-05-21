@@ -1,0 +1,50 @@
+@import "bootstrap";
+.carts, #side #cart {
+/* END_HIGHLIGHT */
+  .item_price, .total_line {
+    text-align: right;
+  }
+  .total_line .total_cell {
+    font-weight: bold;
+    border-top: 1px solid #595;
+  }
+}
+ #side {
+    padding: 0.5em 1em;
+    width:60%;
+    background: #efefef;
+
+/* START_HIGHLIGHT */
+    form, div {
+      display: inline;
+    }  
+ 
+    input {
+      font-size: small;
+    }
+
+    #cart {
+      font-size: smaller;
+      color:     black;
+
+      table {
+        border-top:    1px dotted #595;
+        border-bottom: 1px dotted #595;
+        margin-bottom: 10px;
+      }
+    }
+
+/* END_HIGHLIGHT */
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+
+        a {
+          color: black;
+          font-size: small;
+        }
+      }
+    }
+  }
